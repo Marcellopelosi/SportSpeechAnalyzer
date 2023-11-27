@@ -4,7 +4,7 @@ import os
 from langchain.prompts import PromptTemplate
 from langchain.llms import HuggingFaceHub
 from langchain.chains import LLMChain
-import nlkt
+import nltk
 nltk.download('wordnet')
 nltk.download('punkt')
 from nltk.stem import PorterStemmer
