@@ -58,7 +58,7 @@ def main():
 
         # Process text using Model 2 and display as DataFrame
         st.header("Processed DataFrame from Model 2")
-        processed_dataframe = process_text_model_2(processed_text_1)
+        processed_dataframe = process_text_model_2(text_corrected)
         st.write(processed_dataframe)
 
 if __name__ == "__main__":
