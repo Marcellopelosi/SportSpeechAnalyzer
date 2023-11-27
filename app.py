@@ -1,11 +1,6 @@
 import streamlit as st
 import pandas as pd
-
-# Function to process text using Model 1
-def process_text_model_1(input_text):
-    # Replace this with your model's processing logic
-    processed_text = input_text.upper()  # Example: Convert text to uppercase
-    return processed_text
+from Text_correction import text_correction
 
 # Function to process text using Model 2 and return a DataFrame
 def process_text_model_2(input_text):
@@ -32,10 +27,10 @@ def main():
         st.header("Original Text")
         st.text(text)
 
-        # Process text using Model 1
-        processed_text_1 = process_text_model_1(text)
-        st.header("Processed Text from Model 1")
-        st.text(processed_text_1)
+        # Process text using puntuaction correction model
+        text_corrected = text_correction(text)
+        st.header("Punctuation correction")
+        st.text(text_corrected)
 
         # Process text using Model 2 and display as DataFrame
         st.header("Processed DataFrame from Model 2")
