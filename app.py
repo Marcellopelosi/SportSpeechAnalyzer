@@ -21,6 +21,7 @@ def keywords_to_dominant_group(keywords_list):
   return domninant_group
 
 def text_to_sentences(text):
+    text = text.replace("!", ".")
     strings = [(sentence + ".").strip() for sentence in text.split(".")]
     merged_sentences = []
     current_sentence = ''
