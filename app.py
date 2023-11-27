@@ -8,7 +8,7 @@ from langchain.chains import LLMChain
 
 def text_correction(question):
 
-  os.environ["huggingface_api_key"] == st.secrets["huggingface_api_key"]
+  os.environ["HUGGINGFACEHUB_API_TOKEN"] == st.secrets["huggingface_api_key"]
   
   template = """You are a severe grammar teacher. You receive as input a text without punctuation and have to output the same text but with correct punctuation. If you are in doubt between a comma and a full stop, prefer the full stop.
   Question: {question}
