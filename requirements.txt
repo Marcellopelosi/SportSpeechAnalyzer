@@ -2,3 +2,4 @@ streamlit
 langchain==0.0.340
 huggingface_hub==0.19.4
 transformers==4.35.2
+nlkt
