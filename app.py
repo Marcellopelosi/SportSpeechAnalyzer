@@ -77,7 +77,7 @@ def text_correction(question):
   return llm_chain.run(question)
 
 def main():
-    st.title("Text Processing Interface")
+    st.title("Keywords Extraction Interface")
 
     # File upload
     uploaded_file = st.file_uploader("Upload a text file", type="txt")
