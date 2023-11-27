@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
 import os
-from langchain.prompts import PromptTemplate
-from langchain.llms import HuggingFaceHub
-from langchain.chains import LLMChain
 import nltk
 nltk.download('wordnet')
 nltk.download('punkt')
@@ -58,23 +55,50 @@ def keywords_extractor(text):
   results["group"] = results["keywords"].apply(lambda keywords_list: keywords_to_dominant_group(keywords_list))
   return results
 
+import requests
 
-def text_correction(question):
+def split_text_into_blocks(text, block_size=200):
+    words = text.split()
+    num_words = len(words)
+    start = 0
+    blocks = []
 
-  os.environ["HUGGINGFACEHUB_API_TOKEN"] = st.secrets["huggingface_api_key"]
-  template = """You are a severe grammar teacher. You receive as input a text without punctuation and have to output the same text but with correct punctuation. If you are in doubt between a comma and a full stop, prefer the full stop.
-  Question: {question}
-  
-  Answer:"""
-  
-  prompt = PromptTemplate(template=template, input_variables=["question"])
-  repo_id = "google/flan-t5-xxl"
-  llm = HuggingFaceHub(
-      repo_id=repo_id, model_kwargs={"temperature": 0.1}
-  )
-  llm_chain = LLMChain(prompt=prompt, llm=llm)
+    while start < num_words:
+        end = min(start + block_size, num_words)
+        block = ' '.join(words[start:end])
+        blocks.append(block)
+        start = end
 
-  return llm_chain.run(question)
+    return blocks
+
+
+API_TOKEN = st.secrets["huggingface_api_key"]
+API_URL = "https://api-inference.huggingface.co/models/oliverguhr/fullstop-punctuation-multilang-large"
+headers = {"Authorization": f"Bearer {API_TOKEN}"}
+
+def query(payload):
+    response = requests.post(API_URL, headers=headers, json=payload)
+    return response.json()
+
+def punt_corrector(question):
+  data = query(question)
+  corrected_text = []
+  for dictionary in data:
+    if dictionary["entity_group"]!= "0":
+      p = dictionary["entity_group"]
+    else:
+      p = ''
+    corrected_text.append(dictionary["word"] + p)
+  answer = " ".join(corrected_text)
+  return answer
+
+def complete_answer_calculator(question):
+  answer = []
+  for subquestion in split_text_into_blocks(question):
+    answer.append(punt_corrector(subquestion))
+
+  complete_answer = " ".join(answer)
+  return complete_answer
 
 def main():
     st.title("Keywords Extraction Interface")
@@ -91,7 +115,7 @@ def main():
         st.text(text)
 
         # Process text using puntuaction correction model
-        text_corrected = text_correction(text)
+        text_corrected = complete_answer_calculator(text)
         st.header("Punctuation correction")
         st.text(text_corrected)
 
