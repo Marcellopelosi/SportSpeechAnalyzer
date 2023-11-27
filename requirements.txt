@@ -1,4 +1,4 @@
-nltk==3.6.2
+nltk
 streamlit
 langchain==0.0.340
 huggingface_hub==0.19.4
