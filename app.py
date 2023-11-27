@@ -1,6 +1,30 @@
 import streamlit as st
 import pandas as pd
-from Text_correction import text_correction
+import os
+from langchain.prompts import PromptTemplate
+from langchain.llms import HuggingFaceHub
+from langchain.chains import LLMChain
+
+
+def text_correction(question):
+
+  os.environ["huggingface_api_key"] == st.secrets["huggingface_api_key"]
+  
+  template = """You are a severe grammar teacher. You receive as input a text without punctuation and have to output the same text but with correct punctuation. If you are in doubt between a comma and a full stop, prefer the full stop.
+  Question: {question}
+  
+  Answer:"""
+  
+  prompt = PromptTemplate(template=template, input_variables=["question"])
+  
+  repo_id = "google/flan-t5-xxl"
+  
+  llm = HuggingFaceHub(
+      repo_id=repo_id, model_kwargs={"temperature": 0.1}
+  )
+  llm_chain = LLMChain(prompt=prompt, llm=llm)
+
+return llm_chain.run(question)
 
 # Function to process text using Model 2 and return a DataFrame
 def process_text_model_2(input_text):
