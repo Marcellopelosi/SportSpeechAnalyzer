@@ -76,17 +76,6 @@ def text_correction(question):
 
   return llm_chain.run(question)
 
-# Function to process text using Model 2 and return a DataFrame
-def process_text_model_2(input_text):
-    # Replace this with your model's processing logic that returns a pandas DataFrame
-    # Here, we're creating a simple DataFrame for demonstration purposes
-    data = {
-        'Word': input_text.split(),
-        'Length': [len(word) for word in input_text.split()]
-    }
-    df = pd.DataFrame(data)
-    return df
-
 def main():
     st.title("Text Processing Interface")
 
