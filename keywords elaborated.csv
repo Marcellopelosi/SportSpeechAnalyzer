@@ -1,0 +1,207 @@
+term,group,stemmed_term
+communication,mental,commun
+energy,mental,energi
+focus,mental,focu
+attention,mental,attent
+think about it,mental,think about it
+motivation,mental,motiv
+continue,mental,continu
+keep going,mental,keep going
+don't give up,mental,don't give up
+calm down,mental,calm down
+insist,mental,insist
+quality,mental,qualiti
+organization,mental,organ
+strategy,mental,strategi
+quality,mental,qualiti
+teamwork,mental,teamwork
+commitment ,mental,commitment 
+believe,mental,believ
+improvement,mental,improv
+success,mental,success
+determination,mental,determin
+positive,mental,posit
+power,mental,power
+vision,mental,vision
+lifestyle,mental,lifestyl
+consistency,mental,consist
+functional,mental,function
+inspiring,mental,inspir
+dedication,mental,dedic
+push,mental,push
+achieve,mental,achiev
+opportunity,mental,opportun
+patient,mental,patient
+coordination,fitness,coordin
+core,fitness,core
+exercise,fitness,exercis
+training,fitness,train
+agility,fitness,agil
+backward run,fitness,backward run
+cardio,fitness,cardio
+intensity,fitness,intens
+jump,fitness,jump
+lateral run,fitness,lateral run
+plank,fitness,plank
+resistance,fitness,resist
+run,fitness,run
+running,fitness,run
+shuttle run,fitness,shuttle run
+skip,fitness,skip
+sprint,fitness,sprint
+strength,fitness,strength
+change speed,fitness,change speed
+quick feet,fitness,quick feet
+ready position,fitness,ready position
+on your toes,fitness,on your toes
+bend your knees,fitness,bend your knees
+acceleration,fitness,acceler
+decelereation,fitness,deceler
+shuffle,fitness,shuffl
+cross run,fitness,cross run
+freeze,tactical,freez
+stand still,tactical,stand still
+delay,tactical,delay
+tempo,tactical,tempo
+timing,tactical,time
+chance,tactical,chanc
+corner,tactical,corner
+intercept,tactical,intercept
+man on,tactical,man on
+man to man,tactical,man to man
+mark,tactical,mark
+marking,tactical,mark
+near post,tactical,near post
+offside,tactical,offsid
+press,tactical,press
+pressing,tactical,press
+second post,tactical,second post
+simulation,tactical,simul
+penalty,tactical,penalti
+throwin,tactical,throwin
+midfield line,tactical,midfield line
+attack,tactical,attack
+corner,tactical,corner
+attacking half,tactical,attacking half
+attacking midfielder,tactical,attacking midfielder
+attacking third,tactical,attacking third
+ten v ten,tactical,ten v ten
+ten v nine,tactical,ten v nine
+eleven v ten,tactical,eleven v ten
+eleven v eleven,tactical,eleven v eleven
+one v one,tactical,one v one
+two v one,tactical,two v one
+three v two,tactical,three v two
+three v three,tactical,three v three
+four v three,tactical,four v three
+four v four,tactical,four v four
+five v four,tactical,five v four
+five v five,tactical,five v five
+six v five,tactical,six v five
+six v six,tactical,six v six
+seven v six,tactical,seven v six
+seven v seven,tactical,seven v seven
+eight v seven,tactical,eight v seven
+eight v eight,tactical,eight v eight
+nine v eight,tactical,nine v eight
+nive v nine,tactical,nive v nine
+center forward,tactical,center forward
+centerback,tactical,centerback
+change side,tactical,change side
+defender,tactical,defend
+defense,tactical,defens
+defenseman,tactical,defenseman
+defensive half,tactical,defensive half
+defensive third,tactical,defensive third
+forward,tactical,forward
+fullback,tactical,fullback
+holding midfielder,tactical,holding midfielder
+libero,tactical,libero
+middle third,tactical,middle third
+midfield,tactical,midfield
+midfielder,tactical,midfield
+offense,tactical,offens
+offensive half,tactical,offensive half
+offside,tactical,offsid
+outside back,tactical,outside back
+player positions,tactical,player positions
+playmaker,tactical,playmak
+possession,tactical,possess
+stopper,tactical,stopper
+striker,tactical,striker
+sweeper,tactical,sweeper
+switch the field,tactical,switch the field
+thirds of the field,tactical,thirds of the field
+two way midfielder,tactical,two way midfielder
+winger,tactical,winger
+spread out,tactical,spread out
+pinch in,tactical,pinch in
+push-up,tactical,push-up
+drop back,tactical,drop back
+play forward,tactical,play forward
+finish the play,tactical,finish the play
+shift,tactical,shift
+keep it,tactical,keep it
+patient,tactical,patient
+triangle,tactical,triangl
+diagonal run,tactical,diagonal run
+overlap,tactical,overlap
+underlap,tactical,underlap
+goal side,tactical,goal side
+delay,tactical,delay
+hold the position,tactical,hold the position
+bent the run,tactical,bent the run
+cut,tactical,cut
+wing play,tactical,wing play
+front goal,tactical,front goal
+back goal,tactical,back goal
+scan,tactical,scan
+look before,tactical,look before
+anticipate,tactical,anticip
+read the situation,tactical,read the situation
+keep possession,tactical,keep possession
+shape,tactical,shape
+ball line,tactical,ball line
+deflection,technical,deflect
+mistake,technical,mistak
+tackle,technical,tackl
+top corner,technical,top corner
+touchline,technical,touchlin
+wall pass,technical,wall pass
+crossbar,technical,crossbar
+right foot,technical,right foot
+left foot,technical,left foot
+finish,technical,finish
+control and dribble,technical,control and dribble
+control and pass,technical,control and pass
+control the ball,technical,control the ball
+cut,technical,cut
+dive,technical,dive
+dribble,technical,dribbl
+dribble the ball,technical,dribble the ball
+dribbling,technical,dribbl
+drive the ball,technical,drive the ball
+fake,technical,fake
+first time,technical,first time
+head it,technical,head it
+header,technical,header
+kick,technical,kick
+once touch,technical,once touch
+receive the ball,technical,receive the ball
+score,technical,score
+turn,technical,turn
+two touches,technical,two touches
+open body,technical,open body
+control,technical,control
+first touch of of pressure,technical,first touch of of pressure
+run with the ball,technical,run with the ball
+repeat,mental,repeat
+progress,mental,progress
+goalie,tactical,goali
+substitute,tactical,substitut
+sub,tactical,sub
+wide,tactical,wide
+penalty,tactical,penalti
+cross,technical,cross
+pass,technical,pass
+shot,technical,shot
