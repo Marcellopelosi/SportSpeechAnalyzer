@@ -1,6 +1,6 @@
 import streamlit as st
-from PuntuactionCorrector import puntuaction_corrector
-from KeywordsExtractor import extract_keywords
+from puntuactionCorrector import puntuaction_corrector
+from keywordsExtractor import extract_keywords
 
 def main():
     st.title("Keywords Extraction Interface")
@@ -23,7 +23,7 @@ def main():
 
         # Process text using Model 2 and display as DataFrame
         st.header("Keywords extraction")
-        processed_dataframe = keywords_extractor(text_corrected)
+        processed_dataframe = extract_keywords(text_corrected)
         st.write(processed_dataframe)
 
 if __name__ == "__main__":
