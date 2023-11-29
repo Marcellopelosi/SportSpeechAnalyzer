@@ -1,6 +1,6 @@
 import streamlit as st
-import PuntuactionCorrector
-import KeywordsExtractor
+from puntuactionCorrector import puntuaction_corrector
+from keywordsExtractor import keywords_extractor
 
 def main():
     st.title("Keywords Extraction Interface")
