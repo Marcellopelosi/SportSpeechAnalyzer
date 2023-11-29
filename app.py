@@ -45,6 +45,7 @@ def keywords_extractor(text):
     words = word_tokenize(sentence)
     stemmed_words = [stemmer.stem(re.sub(r'[^\w\s]', '', word)) for word in words]
     keywords_found = [words[i] for i,sw in enumerate(stemmed_words) if sw in keywords.stemmed_term.to_list()]
+    keywords_found = list(set(keywords_found))
     keywords_in_sentence.append(keywords_found)
 
   results = pd.DataFrame()
