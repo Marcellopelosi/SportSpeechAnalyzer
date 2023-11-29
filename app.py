@@ -1,5 +1,5 @@
 import streamlit as st
-from puntuactionCorrector import puntuaction_corrector
+from puntuactionCorrector import complete_answer_calculator
 from keywordsExtractor import extract_keywords
 
 def main():
@@ -17,7 +17,7 @@ def main():
         st.text(text)
 
         # Process text using puntuaction correction model
-        text_corrected = puntuaction_corrector(text)
+        text_corrected = complete_answer_calculator(text)
         st.header("Punctuation correction")
         st.text(text_corrected)
 
