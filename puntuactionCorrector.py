@@ -40,7 +40,7 @@ def puntuaction_corrector(question):
 def complete_answer_calculator(question):
   answer = []
   for subquestion in split_text_into_blocks(question):
-    answer.append(punt_corrector(subquestion))
+    answer.append(puntuaction_corrector(subquestion))
 
   complete_answer = " ".join(answer)
   return complete_answer
