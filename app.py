@@ -11,11 +11,10 @@ stemmer = PorterStemmer()
 
 keywords = pd.read_csv("keywords elaborated.csv")
 
-def keywords_to_dominant_group(keywords_list):
+def keywords_to_group(keywords_list):
   stemmed_term_group_dict = dict(zip(keywords["stemmed_term"], keywords["group"]))
   groups = [stemmed_term_group_dict[stemmer.stem(k)] for k in keywords_list]
-  domninant_group = max(set(groups), key=groups.count)
-  return domninant_group
+  return list(set(groups))
 
 def text_to_sentences(text):
     text = text.replace("!", ".")
@@ -52,7 +51,7 @@ def keywords_extractor(text):
   results["highlights"] = sentences
   results["keywords"] = keywords_in_sentence
   results = results[results["keywords"].apply(len)>0]
-  results["group"] = results["keywords"].apply(lambda keywords_list: keywords_to_dominant_group(keywords_list))
+  results["group"] = results["keywords"].apply(lambda keywords_list: keywords_to_group(keywords_list))
   return results
 
 import requests
