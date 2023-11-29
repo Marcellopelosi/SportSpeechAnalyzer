@@ -1,4 +1,2 @@
-class KeywordsExtractor:
-    @staticmethod
-    def extract_keywords(text):
-        return ["CIAO", "MAMMA", "GUARDA", "COME", "MI", "DIVERTO"]
+def extract_keywords(text):
+    return ["CIAO", "MAMMA", "GUARDA", "COME", "MI", "DIVERTO"]
